@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{amsmath,amssymb}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.35em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\definecolor{navy}{HTML}{1F3A5F}
+\definecolor{sky}{HTML}{EAF3FB}
+\definecolor{redbox}{HTML}{FCECEC}
+\definecolor{greenbox}{HTML}{EDF8F0}
+\definecolor{goldbox}{HTML}{FFF7E6}
+\definecolor{grayline}{HTML}{D7DEE8}
+\newtcolorbox{skillbox}[2][]{
+  colback=#2,
+  colframe=navy,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  fonttitle=\bfseries,
+  title=#1
+}
+\newcommand{\code}[1]{\texttt{#1}}
+\begin{document}
+
+{\Large\bfseries Algebra 2 SOL: Desmos Reference Sheet}\\[2pt]
+{\small Four high-impact Desmos moves that can help with most Algebra 2 exam questions.}
+
+\vspace{0.5em}
+\begin{tcolorbox}[colback=sky,colframe=navy,boxrule=0.9pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+\textbf{Core idea:} When you get stuck, \textbf{graph it, split it, or test values}. Desmos is strongest when you turn algebra into something visual or checkable.
+\end{tcolorbox}
+
+\vspace{0.5em}
+\begin{multicols}{2}
+
+\begin{skillbox}[1. Expression Evaluation \& Simplification]{sky}
+\textbf{If there is one variable:}
+\begin{itemize}
+  \item Use \textbf{$x$}.
+  \item Type the expression as a function: \code{f(x)= [expression]}.
+  \item If a value is given, evaluate it with \code{f(value)}.
+  \item If no value is given, graph the expression and compare it to the answer choices.
+\end{itemize}
+
+\textbf{If there is more than one variable:}
+\begin{itemize}
+  \item Use variables such as \textbf{$a$, $b$, $c$}.
+  \item Assign values like \textbf{$a=2$, $b=3$, $c=4$}. Do \textbf{not} use $-1$, $0$, or $1$.
+  \item Evaluate the original expression and then test answer choices until one matches.
+\end{itemize}
+
+\textbf{Useful inputs:}
+\begin{itemize}
+  \item \code{f(x)=3x\^{}2-2x+5}
+  \item \code{f(2)}
+  \item \code{a=2} \hspace{1em} \code{b=3}
+\end{itemize}
+
+\textbf{Why avoid $-1$, $0$, $1$?} Those values can make different expressions look the same by accident.
+\end{skillbox}
+
+\columnbreak
+
+\begin{skillbox}[2. Equations \& Inequalities]{redbox}
+\textbf{If there is one variable:}
+\begin{itemize}
+  \item Use \textbf{$x$}.
+  \item Graph both sides as separate equations: \code{y=[left side]} and \code{y=[right side]}.
+  \item The \textbf{intersection} is the solution.
+\end{itemize}
+
+\textbf{If there are variables on both sides:}
+\begin{itemize}
+  \item Split the equation into two lines.
+  \item Check what the graphs do:
+  \begin{itemize}
+    \item intersect once $\rightarrow$ one solution
+    \item parallel $\rightarrow$ no solution
+    \item same line $\rightarrow$ infinite solutions
+  \end{itemize}
+\end{itemize}
+
+\textbf{If an equation is set equal to 0:}
+\begin{itemize}
+  \item Graph only the expression: \code{y=[expression]}.
+  \item Look for \textbf{x-intercepts}.
+  \item No x-intercept means \textbf{no real solution}.
+\end{itemize}
+
+\textbf{Inequalities:}
+\begin{itemize}
+  \item Graph the inequality directly and use the shaded region.
+\end{itemize}
+\end{skillbox}
+
+\vspace{0.4em}
+
+\begin{skillbox}[3. Regressions]{greenbox}
+\textbf{Use regression when you need the slope or equation of a line, quadratic, or exponential fx.}
+\begin{itemize}
+  \item Enter two points in a table for a line, three points or more for quadratic or exponential fxs.
+  \item Run the proper regression using the regression tool in desmos.  $R^2 = 1$ is a perfect fit.
+  \item Desmos will give you your function definition after you run the regression.
+\end{itemize}
+
+\textbf{This is useful when:}
+\begin{itemize}
+  \item you are given two or more points
+  \item you can read two or more points from a graph
+  \item you need the equation of a line in y=mx+b, a quadratic in standard form, or an exponential function definition
+\end{itemize}
+
+\textbf{Strategy:}
+\begin{enumerate}
+  \item Graph the line/curve if needed.
+  \item Pick two or three clear points on the line/curve.
+  \item Put them in a table.
+  \item Use regression to get the equation.
+\end{enumerate}
+
+\end{skillbox}
+
+\begin{skillbox}[Quick Decision Guide]{goldbox}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.28\linewidth}X}
+What am I trying to do? & Best Desmos move \\
+Evaluate an expression & Make a function and plug in a value \\
+Compare expressions & Test values or compare graphs \\
+Solve an equation & Graph both sides and find the intersection \\
+Solve an equation set to 0 & Graph the expression and check x-intercepts \\
+Find line/curve equation & Use two/three points and linear/quadratic/exponential regression \\
+\end{tabularx}
+\end{skillbox}
+
+
+\columnbreak
+
+\begin{skillbox}[4. Normal Distribution \& Probability]{greenbox}
+\textbf{ Use for data distribution problems and counting/probability problems}
+\begin{itemize}
+  \item Use the normaldist function.  If you don't put anything in parentheses, it defaults to a mean of 0 and standard deviation of 1 (this is the standard normal distribution) otherwise, put in the mean and standard deviation from your problem
+  \item If you are looking for a percentage/area, use the area button for normal distribution
+  \item If you are looking for values from a percentage, use the bounds button.
+  \item For example, if I want to know the percentage of people scoring between two numbers, I would use the area button.  If I wanted to find the scores for the middle 50% of the distribution, I would use the bounds button. 
+\end{itemize}
+
+\textbf{ Use the z-score formula for computing z-scores:  $z=\frac{x-\mu}{\sigma}$}
+\begin{itemize}
+  \item use for comparing datasets
+  \item for example, I need to find the equivalent score on another test using the z-score from the first test.
+  \item If you have 3 of the 4 variables, use desmos to solve for the 4th!
+\end{itemize}
+\end{skillbox}
+
+
+\begin{skillbox}[High-Impact Reminders]{goldbox}
+\begin{itemize}
+  \item Use \textbf{$x$} for single-variable work.
+  \item Split equations into two sides when Desmos does not show the answer clearly.
+  \item If you cannot see a solution, zoom out or check x-intercepts.
+  \item Pick easy-to-read points when using regression.
+  \item When in doubt: \textbf{graph it, split it, or test values}. 
+\end{itemize}
+\end{skillbox}
+
+\end{multicols}
+
+\vspace{0.4em}
+{\small\textbf{Note:} Desmos is a tool to help you see structure. Always connect what the graph shows back to the algebra in the problem.}
+
+\end{document}
