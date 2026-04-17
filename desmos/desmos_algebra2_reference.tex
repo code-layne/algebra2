@@ -1,0 +1,229 @@
+%! Author = layne
+%! Date = 4/12/26
+
+% Preamble
+%  preamble
+\documentclass[10pt]{article}
+
+% dependencies
+\usepackage[margin=0.6in]{geometry}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+
+\tcbuselibrary{breakable}
+
+% definitions
+\definecolor{sky}{HTML}{EAF3FB}
+\definecolor{navy}{HTML}{1F3A5F}
+\definecolor{redbox}{HTML}{FCECEC}
+\definecolor{greenbox}{HTML}{EDF8F0}
+\definecolor{goldbox}{HTML}{FFF7E6}
+\newtcolorbox{skillbox}[2][]{
+    colback=#2,
+    colframe=navy,
+    boxrule=0.8pt,
+    arc=2mm,
+    left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+    fonttitle=\bfseries,
+    title=#1,
+    breakable
+}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.35em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+
+
+\begin{document}
+    \begin{center}
+        {\Large\bfseries Algebra 2 SOL: Desmos Reference Sheet} \\
+        {\small \bfseries Three high-impact Desmos moves to help you ace your Algebra 1 SOL}
+    \end{center}
+
+    \begin{tcolorbox}[colback=sky,colframe=navy,boxrule=0.9pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+        \textbf{Core idea:} When you get stuck, \textbf{graph it, split it, or test values}.
+        Desmos is strongest when you turn algebra into something visual or checkable.
+    \end{tcolorbox}
+
+    \vspace{0.5em}
+    \begin{skillbox}[Quick Decision Guide]{goldbox}
+        \begin{tabularx}{\linewidth}{>{\bfseries}p{0.28\linewidth}X}
+            What am I trying to do? & Best Desmos move \\
+            \hline
+            \vspace{0.5em}
+
+            Evaluate an expression & \vspace{0.5em} One variable? Make a function or use a slider and plug in a value.  \\
+            & Two or more variables? Use a, b, c \\
+            \hline
+            \vspace{0.5em}
+
+            Simplify or compare expressions & \vspace{0.5em} One variable? Graph and look for equivalence\\
+            & Two variables? Use a, b, c and compare expression values\\
+            \hline
+            \vspace{0.5em}
+
+            Factor a quadratic & \vspace{0.5em}use x and graph the quadratic then look for the zeros \\
+            \hline
+            \vspace{0.5em}
+
+            Solve an equation & \vspace{0.5em} Graph both sides and find the intersection \\
+            \hline
+            \vspace{0.5em}
+
+            Solve an equation set to 0 & \vspace{0.5em} Graph the expression and check x-intercepts \\
+            \hline
+            \vspace{0.5em}
+
+            Find slope or line equation & \vspace{0.5em} Use two points and linear regression \\
+        \end{tabularx}
+    \end{skillbox}
+
+    \vspace{0.5em}
+
+    \begin{multicols}{2}
+        \begin{skillbox}[1. Simplify \& Evaluate Expressions]{greenbox}
+            \textbf{If there is one variable:}
+            \begin{itemize}
+                \item Use \textbf{$x$}.
+                \item Type the expression as a function: $f(x)= [expression]$.
+                \begin{itemize}
+                    \item \textbf{Example:} find the value of $x^2-4$ when $x=7$.
+                    \item In Desmos type in, $f(x)=x^2-4$
+                \end{itemize}
+                \item If a value is given, evaluate it with $f(value)$.
+                \item If no value is given, graph the expression and compare it to the answer choices.
+            \end{itemize}
+            \textbf{If there is more than one variable:}
+            \begin{itemize}
+                \item Use variables such as \textbf{$a$, $b$, $c$}.
+                \item Assign values like \textbf{$a=2$, $b=3$, $c=4$},
+                but do \textbf{not} use $-1$, $0$, or $1$.
+                \item Evaluate the original expression and then test answer choices until one matches.
+            \end{itemize}
+
+            \textbf{Useful inputs:}
+            \begin{itemize}
+                \item \textbf{$ f(x)=3x^2-2x+5 $}
+                \item \textbf{$ f(2) $}
+                \item $a=2$ \hspace{1em} $b=3$
+            \end{itemize}
+
+            \textbf{Why avoid $-1$, $0$, $1$?} Those values can make different expressions look the same by accident.
+        \end{skillbox}
+
+        \begin{skillbox}[2. Equations \& Inequalities]{redbox}
+            \textbf{If there is one variable:}
+            \begin{itemize}[noitemsep, topsep=0pt]
+                \item Use \textbf{$x$}.
+                \item Graph both sides as separate equations: $y=[left side]$ and $y=[right side]$.
+                \item The \textbf{intersection} is the solution.
+            \end{itemize}
+
+            \textbf{If there are variables on both sides:}
+            \begin{itemize}[noitemsep, topsep=0pt]
+                \item Split the equation into two lines.
+                \item Check what the graphs do:
+                \begin{itemize}
+                    \item intersect once $\rightarrow$ one solution
+                    \item parallel $\rightarrow$ no solution
+                    \item same line $\rightarrow$ infinite solutions
+                \end{itemize}
+            \end{itemize}
+
+            \textbf{If an equation is set equal to 0:}
+            \begin{itemize}
+                \item Graph only the expression: $y=[expression]$.
+                \item Look for \textbf{x-intercepts}.
+                \item No x-intercept means \textbf{no real solution}.
+            \end{itemize}
+
+            \textbf{Inequalities:}
+            \begin{itemize}
+                \item Graph the inequality directly and use the shaded region.
+                \item For systems of inequalities, the double-shaded region is the solution.
+            \end{itemize}
+        \end{skillbox}
+
+        \begin{skillbox}[3. Regressions for Linear / Quadratic / Exponential Functions]{sky}
+            \begin{itemize}
+                \item {Use regression when you need the slope or equation of a line.}
+                \item {Use regression when you need the equation of a quadratic/parabola}
+                \item {Use regression when you need the equation of an exponential function}
+            \end{itemize}
+            \begin{itemize}
+                \item Enter two points in a table (3 or more for quadratic/exponential).
+                \item Run the appropriate regression using the regression utility
+                \item Desmos will give you the equation for the regression.
+            \end{itemize}
+
+            \textbf{This is useful when:}
+            \begin{itemize}
+                \item you are given two or more points
+                \item you can read two or more points from a graph
+                \item the curve is written in one form and you want to use it in another.
+            \end{itemize}
+
+            \textbf{Strategy:}
+            \begin{itemize}[noitemsep, topsep=2pt]
+                \item Graph the line if needed.
+                \item Pick two or more clear points on the line.
+                \item Put them in a table.
+                \item Use regression to get the equation.
+            \end{itemize}
+        \end{skillbox}
+
+        \begin{skillbox}[4. Normal Distribution; Permutations \& Combinations]{sky}
+            \begin{itemize}
+                \item Univariate data: one variable
+                \item Bivariate data: two variables
+                \item Multivariate data: 3 or more variables
+                \item \textbf{To determine what kind of data you have, ask yourself how many items you must return in an answer}
+                \item For example, a study of the distribution of children's heights from ages 8-13, if you were asked this question about your child, you would give one answer -- the child's height.  Therefore, this is univariate data.
+            \end{itemize}
+            \textbf{Data Distributions}
+            \begin{itemize}
+                \item Normal:  mean=median=mode, bell-curve
+                \item Positive/right skew:
+                \item Negative/left skew:
+            \end{itemize}
+
+            \textbf{This is useful when:}
+            \begin{itemize}
+                \item you are given two or more points
+            \end{itemize}
+
+            \textbf{Strategy:}
+            \begin{enumerate}
+                \item Graph the line if needed.
+            \end{enumerate}
+        \end{skillbox}
+
+        \begin{skillbox}[High-Impact Reminders]{goldbox}
+            \begin{itemize}
+                \item You \textbf{must} verify what you type into Desmos, and you must do it \textbf{every single time}.
+                \item Use \textbf{$x$} for single-variable work.
+                \item Split equations into two sides when Desmos does not show the answer clearly.
+                \item If you cannot see a solution, zoom out or check x-intercepts.
+                \item Pick easy-to-read points when using regression.
+                \item When in doubt: \textbf{graph it, split it, or test values}.
+            \end{itemize}
+        \end{skillbox}
+
+        \begin{skillbox}[Desmos Keyboard Shortcuts]{greenbox}
+            \begin{itemize}
+                \item sqrt = $\sqrt{}$
+                \item cbrt = $\sqrt[3]{}$
+                \item \texttt{\textasciicircum} exponent (shift-6)
+                \item $f(x) = x^2 \{x \ge 0\}$ domain restriction
+                \item pi = $\pi$
+                \item gcf(num1, num2, num3, \ldots) = greatest common factor
+                \item lcm(num1, num2, num3, \ldots) = lowest common multiple
+                \item round(num1, \# places) = round number to \# places
+            \end{itemize}
+        \end{skillbox}
+    \end{multicols}
+
+\end{document}
