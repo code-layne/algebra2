@@ -9,7 +9,10 @@ DESMOS_TEX = $(DESMOS_MAIN)/*.tex
 UNIT1_MAIN = unit1_function_analysis
 UNIT1_TEX = $(UNIT1_MAIN)/*.tex
 
-all: desmos unit1
+UNIT11_MAIN = unit11_univariate_distributions
+UNIT11_TEX = $(UNIT11_MAIN)/*.tex
+
+all: desmos unit1 unit11
 
 desmos: $(DESMOS_MAIN)
 	mkdir -p build/desmos
@@ -18,6 +21,10 @@ desmos: $(DESMOS_MAIN)
 unit1: $(UNIT1_MAIN)
 	mkdir -p build/$(UNIT1_MAIN)
 	$(LATEXMK) $(LATEXFLAGS) -outdir=build/$(UNIT1_MAIN) $(UNIT1_TEX)
+
+unit11: $(UNIT11_MAIN)
+	mkdir -p build/$(UNIT11_MAIN)
+	$(LATEXMK) $(LATEXFLAGS) -outdir=build/$(UNIT11_MAIN) $(UNIT11_TEX)
 
 clean:
 	$(LATEXMK) -c $(DESMOS_MAIN)
